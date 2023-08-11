@@ -1,0 +1,40 @@
+---
+name: Badge
+menu: Components
+route: /components-badge
+---
+
+import Badge from '@site/src/components/Badge'
+
+# Badge
+
+## Description
+
+Badges can be added to show small, simple details of information.
+
+## Badge Types
+
+A badge can be of two types, primary and secondary.
+
+<Badge>Save $100</Badge>
+<Badge type="secondary" style={{ marginLeft: '5px' }}>
+  Save $100
+</Badge>
+
+## Adding Components
+
+You can pass components to the Badge component to inherit their styles and props.
+
+<Badge component={'a'} href="/">
+  Click Me
+</Badge>
+<Badge component={'a'} href="/" type="secondary" style={{ marginLeft: '5px' }}>
+  Click Me
+</Badge>
+
+## Custom Width and Height styles
+
+<Badge style={{ width: '200px' }}>WideGuy</Badge>
+<Badge type="secondary" style={{ height: '50px', marginLeft: '5px' }}>
+  TallMan
+</Badge>

@@ -1,0 +1,79 @@
+//--- colors
+
+// DreamHub color
+$pdp-btn-circle-color: #f0f0f0;
+
+// Unify color
+$unify-blue-light: #abbded;
+$unify-purple-light: #c3b5d5;
+$unify-red-light: #ff8674;
+$unify-link-blue: #006be9;
+
+// main colors
+$red: #d63426;
+$green: #119e16;
+$yellow: #fccc0b;
+$blue: #0094ff;
+$dark-blue: #0b1232;
+$dark-red: #9d1c11;
+$dark-red-2: #b44e3c;
+$dark-green: #006601;
+
+// gray scale
+$white: #fff;
+$gray-1: #f8f8f8;
+$gray-2: #f4f4f4;
+$gray-3: #e1e1e1;
+$gray-4: #d8d8d8;
+$gray-5: #b3b5b7;
+$gray-6: #979797;
+$gray-7: #87817d;
+$gray-8: #626366;
+$gray-9: #545658;
+$gray-10: #2f3337;
+$gray-11: #2d2926;
+$gray-12: #323030;
+$black: #000;
+$transparent: transparent;
+$inherit: inherit;
+$linen: #fdefe6;
+$ghost-white: #faf9f8;
+
+// primary colors
+$primary-red: #d63426;
+$primary-blue: #1b244d;
+$primary-blue-light: #f2f5ff;
+$primary-pink-light: #f7c3c3;
+$primary-coral-dark: #c96d5c;
+
+// Component specific colors
+$mattributes-progress-bar: #aebde8;
+$alert: #fffae7;
+$error: #fbebe9;
+
+// --- font family
+$r-extrabold: 'Rubik Black', 'Arial', sans-serif;
+$r-bold: 'Rubik Bold', 'Arial', sans-serif;
+$r-semibold: 'Rubik Bold', 'Arial', sans-serif;
+$r-medium: 'Rubik Medium', 'Arial', sans-serif;
+$r-regular: 'Rubik', 'Arial', sans-serif;
+$r-light: 'Rubik Light', 'Arial', sans-serif;
+
+// --- Media breakpoints
+$large-desktop: 1500px;
+$desktop: 1199px;
+$tablet: 990px;
+$desktop-landscape: 1440px;
+$tablet-landscape: 1152px;
+$tablet-portrait: 768px;
+$mobile: 767px;
+$small-mobile: 425px;
+
+// --- Spacing
+$spacing-xxs: 5px;
+$spacing-xs: 10px;
+$spacing-s: 15px;
+$spacing-m: 30px;
+$spacing-l: 60px;
+$spacing-xl: 90px;
+$spacing-xxl: 120px;
