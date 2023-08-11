@@ -1,7 +1,7 @@
 /* eslint-disable react/button-has-type */
 import React, { ElementType, FunctionComponent, ReactNode, forwardRef } from 'react'
 import clsx from 'clsx'
-import Loading from '../Loading'
+import Loading from '@site/src/components/Loading'
 
 import styles from './button.module.scss'
 
