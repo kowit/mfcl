@@ -1,0 +1,61 @@
+---
+name: Collapse
+menu: Components
+route: /components-collapse
+---
+
+import mattressIpsum from 'mattress-ipsum'
+import Component from 'react-component-component'
+import Button from '@site/src/components/Button'
+import Collapse from '@site/src/components/Collapse'
+
+# Collapse
+
+Collapse creates a smooth transition to hide and show content
+
+## Install
+
+React transition group is needed for the collapse
+
+```bash
+yarn add react-transition-group
+```
+
+```javascript
+import Collapse from '@mfrm/mfcl/Collapse'
+```
+
+## Properties
+
+#### Collapse
+
+## Controlled Collapse
+
+<Component initialState={{ isOpen: false }}>
+  {({ setState, state }) => {
+    return (
+      <>
+        <Button onClick={() => setState({ isOpen: !state.isOpen })}>Click Me</Button>
+        <Collapse isOpen={state.isOpen}>{mattressIpsum()}</Collapse>
+      </>
+    )
+  }}
+</Component>
+
+## Collapse with teaser text
+
+ReactNode not supported while using teaser text, since teaser is calculated from a string.
+
+<Component initialState={{ isOpen: false }}>
+  {({ setState, state }) => {
+    return (
+      <>
+        <Button onClick={() => setState({ isOpen: !state.isOpen })}>Click Me</Button>
+        <Collapse isOpen={state.isOpen} showTeaser teaserLength={85} >
+          {'Mattress ipsum dolor amet Cooling free delivery memory foam spine Sterns & Foster sleep expert 50% Tempur-pedic comfort snoring customized shopping options Sleepys sleep trial california king queen Seally Beautyrest adjustable bed extra firm plush Purple medium save position dreams stomach soft king crib linens Serta shut eye firm neck special financing encased coil best prices comfy brand loft snooze latex gel memory foam pain hypoallergenic hot side down futon Americas top-rated brands Bed sets twin tulo mattress mattress toppers full pillow protectors malouf wrap box spring size ultra plush hybrid headboards bed frames pillow top snuggle innerspring comforters bed sheets nap bundle low price guarantee bunk bed back pillowcases zzzzzz twin headboards pillow protectors snuggle bed sets spine comfy pain nap Beautyrest ultra plush hybrid mattress toppers firm bed frames dreams queen malouf wrap Tempur-pedic pillow top bunk bed extra firm hypoallergenic best prices tulo mattress'}
+        </Collapse>
+      </>
+    )
+  }}
+</Component>
+
