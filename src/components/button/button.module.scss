@@ -1,0 +1,157 @@
+.btn {
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  height: 44px;
+  line-height: 0.75;
+  padding: 0 20px;
+  text-align: center;
+  text-transform: capitalize;
+  transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+  &:disabled {
+    cursor: not-allowed; // stylelint-disable-line
+  }
+
+  &:disabled:not(.link) {
+    background-color: #f8f8f8;
+    color: #d63426;
+    border: solid 1px #e1e1e1;
+  }
+
+  &.sm {
+    font-size: 14px;
+    height: 30px;
+    padding: 0px 20px;
+  }
+
+  &.md {
+    font-size: 14px;
+    height: 34px;
+    padding: 0 30px;
+  }
+
+  &.lg {
+    font-size: 16px;
+    height: 44px;
+    padding: 0 60px;
+  }
+
+  &.rounded {
+    border-radius: 25px;
+  }
+
+  &.loading {
+    pointer-events: none;
+  }
+}
+
+.primary {
+  background-color: #d63426;
+  border: solid 1px #d63426;
+  color: #fff;
+
+  &:hover,
+  &:active {
+    background-color: #d63426;
+    color: #fff;
+    border: solid 1px #d63426;
+  }
+}
+
+.primary-blue {
+  background-color: #1b244d;
+  border: solid 1px #1b244d;
+  color: #fff;
+
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: #1b244d;
+    border: solid 1px #1b244d;
+  }
+}
+
+.btn.primary-blue {
+  &:disabled:not(.link) {
+    background-color: #d63426;
+    color: #d63426;
+    border: solid 1px #d63426;
+  }
+}
+
+.secondary {
+  background-color: #fff;
+  border: solid 1px #d63426;
+  color: #d63426;
+
+  &:hover,
+  &:active {
+    background-color: #d63426;
+    color: #fff;
+    border: solid 1px #d63426;
+  }
+}
+
+.tertiary {
+  background-color: #fff;
+  border: solid 1px #d63426;
+  color: #2d2926;
+
+  &:hover,
+  &:active {
+    background-color: #fff;
+    color: #2d2926;
+    border: solid 1px #d63426;
+  }
+}
+
+.link {
+  background: none;
+  border-radius: 0px;
+  color: #d63426;
+  font-weight: 600;
+  line-height: 1.13;
+  width: initial;
+  text-transform: initial;
+  text-decoration: none;
+
+  &.sm,
+  &.md {
+    font-size: 14px;
+    height: auto;
+    padding: 0px;
+  }
+
+  &.lg {
+    font-size: 16px;
+    height: auto;
+    padding: 0px;
+  }
+
+  &:hover {
+    color: #d63426;
+  }
+
+  &:active {
+    color: #d63426;
+  }
+
+  &.dark {
+    color: #fff;
+  }
+
+  &:disabled {
+    color: #d63426;
+  }
+}
+
+.btn-flex {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
