@@ -1,0 +1,58 @@
+---
+name: Checkbox
+menu: Components
+route: /components-checkbox
+---
+
+import Checkbox from '@site/src/components/Checkbox'
+
+# Checkbox
+
+```javascript
+import Checkbox from '@mfrm/mfcl/Checkbox'
+```
+
+## Properties
+
+<Props of={Checkbox} />
+
+## Basic usage
+
+<Checkbox label="Checkbox" />
+
+## Size
+
+  <Checkbox size="sm" label="Small" />
+  <Checkbox size="md" label="Medium" />
+  <Checkbox size="lg" label="Large" />
+
+## Label Placement
+
+<Checkbox labelPlacement="top" label="Top label" />
+<Checkbox labelPlacement="left" label="Left label" />
+<Checkbox labelPlacement="bottom" label="Bottom label" />
+<Checkbox labelPlacement="right" label="Right label" />
+
+## Background Color
+
+<Checkbox backgroundColor="red" label="Red Background" labelPlacement="right" />
+
+## Checkbox Alignment
+
+<Checkbox alignment="left" label="Left Alignment" />
+<Checkbox alignment="center" label="Center Alignment" />
+<Checkbox alignment="right" label="Right Alignment" />
+
+
+## ADA Checkbox Grouping
+
+Wrap "fieldset" around each grouping of checkboxes for ADA.
+
+  <fieldset>
+    <legend>Pick two</legend>
+    <div className="checkbox-wrapper">
+      <Checkbox label="Option 1" labelPlacement="right" />
+      <Checkbox label="Option 2" labelPlacement="right" />
+      <Checkbox label="Option 3" labelPlacement="right" />
+    </div>
+  </fieldset>

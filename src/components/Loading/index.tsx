@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import Spinner from '@site/src/components/icons/Spinner'
+import Spinner from '@site/src/components/Icons/Spinner'
 import styles from './loading.module.scss'
 
 export interface Props {

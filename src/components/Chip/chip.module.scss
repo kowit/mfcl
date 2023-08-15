@@ -1,0 +1,71 @@
+@import '../../css/variables.scss';
+
+.chip {
+  align-items: center;
+  background: $white;
+  border: 1px solid $gray-3;
+  border-radius: 17.5px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+  margin-right: 5px;
+  padding: 9px 11px 9px 15px;
+
+  &:hover {
+    background: $gray-1;
+    cursor: pointer;
+  }
+}
+
+.not-clickable {
+  pointer-events: none;
+}
+
+.sm {
+  padding: 5px 8px 5px 10px;
+
+  .chip-label {
+    font-size: 12px;
+    margin-right: 2px;
+  }
+}
+
+.default {
+  background: #f0f0f0;
+  border: 1px solid #f0f0f0;
+
+  &:hover {
+    background: $gray-3;
+    border: 1px solid $gray-3;
+  }
+}
+
+.filled {
+  background: $red;
+  border: 1px solid $red;
+  color: $white;
+
+  &:hover {
+    background: $dark-red;
+    border: 1px solid $dark-red;
+  }
+
+  path {
+    stroke: $white;
+  }
+}
+
+.checked {
+  background: $black;
+  color: $white;
+}
+
+.chip-label {
+  font-size: 14px;
+  line-height: 12px;
+  margin-right: 4px;
+}
+
+.checked-label {
+  margin-left: 10px;
+}
