@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import useControlled from '@site/src/utils/useControlled'
 import styles from './checkbox.module.scss'
 
-export interface Props {
+export interface CheckboxProps {
   /** checked or not */
   checked?: boolean
   /** default value for uncontrolled */
@@ -29,7 +29,7 @@ export interface Props {
   [rest: string]: unknown
 }
 
-const Checkbox: FunctionComponent<Props> = forwardRef<HTMLInputElement, Props>(function CheckboxField(props, ref) {
+const Checkbox: FunctionComponent<CheckboxProps> = forwardRef<HTMLInputElement, Props>(function CheckboxField(props, ref) {
   const {
     className,
     backgroundColor = 'black',

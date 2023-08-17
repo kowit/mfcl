@@ -1,0 +1,256 @@
+@import '../../css/variables.scss';
+
+.stepper-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  list-style: none;
+  margin: 0px auto;
+  padding: 5px;
+  width: 100%;
+}
+
+.stepper-wrapper.vertical {
+  flex-direction: column;
+}
+
+.progress-step {
+  -webkit-box-flex: 1;
+  box-sizing: border-box;
+  display: block;
+  flex: 1 1 0%;
+  line-height: 12px;
+  margin: 0;
+  min-height: 20px;
+  min-width: 28px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    content: '';
+    border-top: 1px dashed;
+    border-color: $red;
+    box-sizing: border-box;
+    display: block;
+    height: 0px;
+    right: 0%;
+    position: absolute;
+    top: 11px;
+    width: 99%;
+  }
+
+  &:first-child {
+    &::after {
+      width: 50%;
+    }
+  }
+
+  &:last-child {
+    &::after {
+      right: 50%;
+      width: 50%;
+    }
+  }
+
+  &.passed {
+    &::after {
+      right: 50%;
+      width: 100%;
+    }
+
+    &:first-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        right: 50%;
+        width: 100%;
+      }
+    }
+  }
+
+  &.next-active {
+    &::after {
+      right: 1%;
+      width: 150%;
+    }
+
+    &:last-child {
+      &::after {
+        right: 50%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.progress-step.vertical,
+.progress-step.secondary-vertical {
+  min-height: 65px;
+  flex: 1 1 auto;
+  text-align: inherit;
+
+  &::after {
+    height: 100%;
+    left: 10px;
+    right: auto;
+    bottom: 0%;
+    top: inherit;
+    width: 0px !important;
+  }
+
+  &:last-child {
+    &::after {
+      bottom: 50%;
+      height: 50%;
+    }
+  }
+
+  &.passed {
+    &::after {
+      bottom: 50%;
+      height: 100%;
+    }
+
+    &:last-child {
+      &::after {
+        bottom: 50%;
+        height: 100%;
+      }
+    }
+  }
+
+  &.next-active {
+    &::after {
+      bottom: 1%;
+      height: 150%;
+    }
+
+    &:last-child {
+      &::after {
+        bottom: 50%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.not-passed {
+  opacity: 0.3;
+}
+
+.current-or-passed {
+  opacity: 1;
+}
+
+.circle {
+  align-items: center;
+  background-color: $white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px $white;
+  box-sizing: border-box;
+  display: flex;
+  height: 22px;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.3s;
+  width: 22px;
+  z-index: 20;
+}
+
+.circle.vertical {
+  left: 0px;
+  margin: 0;
+  position: absolute;
+  top: 10px;
+}
+
+.label {
+  box-sizing: border-box;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 100%;
+  line-height: 20px;
+  padding: 14px 9.3px;
+}
+
+.label.vertical {
+  height: initial;
+  line-height: initial;
+  padding: 13px 0px 10px 40px;
+}
+
+// Secondary Styles Begin
+.label.secondary-vertical {
+  height: initial;
+  line-height: initial;
+  padding: 8px 16px;
+}
+
+.secondary-label {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  flex-grow: inherit;
+}
+
+.active-step {
+  background-color: $primary-blue-light;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.inactive-step {
+  display: flex;
+  margin-bottom: 8px;
+  background-color: white;
+}
+
+.secondary-question-wrapper {
+  margin-left: 10px;
+  font-size: 0.75rem;
+  display: grid;
+}
+
+.step-placeholder {
+  border: 2px solid $gray-3;
+  background-color: $gray-3;
+  border-radius: 5px;
+  margin-left: 8px;
+  width: 90%;
+  min-height: 24px;
+}
+
+.step-title {
+  max-width: inherit;
+  font-weight: 400;
+}
+
+.show-answer {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  color: #397f72;
+  margin-top: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: inherit;
+}
+
+.hide-answer {
+  display: none;
+}
+
+.icon-placeholder {
+  border: 2px solid $gray-3;
+  background-color: $gray-3;
+  border-radius: 5px;
+  width: 24px;
+  height: 24px;
+}

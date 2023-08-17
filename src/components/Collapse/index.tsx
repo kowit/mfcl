@@ -8,7 +8,7 @@ interface ChildProps {
   [props: string]: unknown
 }
 
-export interface Props {
+export interface CollapseProps {
   isOpen: boolean
   children?: ReactNode | string
   appear?: boolean
@@ -38,7 +38,7 @@ const transitionStatusToClassHash = {
 
 const noop = () => {}
 
-const Collapse: React.FunctionComponent<Props> = ({
+const Collapse: React.FunctionComponent<CollapseProps> = ({
   children = null,
   className = '',
   isOpen = false,

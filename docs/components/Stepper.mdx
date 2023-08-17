@@ -1,0 +1,154 @@
+---
+name: Stepper
+menu: Components
+route: /components-stepper
+---
+
+import Component from 'react-component-component'
+import { Stepper, Button, Radio, Rating, Loading } from '@site/src'
+
+# Stepper
+
+```javascript
+import { Stepper } from '@mfrm/mfcl'
+```
+
+## Description
+
+Steppers display progress through a sequence of logical and numbered steps. They may also be used for navigation. Steppers may display a transient feedback message after a step is saved.
+
+## Properties
+
+<Props of={Stepper} />
+
+## Basic Usage
+
+<Playground>
+  <Stepper activeStep={1} steps={[false, false, false, false]} />
+</Playground>
+
+## Secondary Experience
+
+<Playground>
+  <Stepper
+    activeStep={2}
+    steps={[
+      { label: { title: 'title sample text?', subtitle: 'subtitle', boldText: ['title', 'text'] } },
+      {
+        label: { title: 'title sample text?', subtitle: '', boldText: ['sample', 'text?'], excludePunctuation: false }
+      },
+      { label: { title: 'title sample', subtitle: '' } }
+    ]}
+    vertical
+    variant="secondary"
+  />
+  <br />
+  <br />
+  <br />
+  <Component
+    initialState={{
+      activeStep: 0,
+      steps: [{ label: 'Label 1' }, { label: 'Label 2' }, { label: 'Label 3' }]
+    }}
+  >
+    {({ setState, state }) => (
+      <Stepper
+        activeStep={state.activeStep}
+        selectIndex={(i) => setState({ activeStep: i })}
+        steps={[
+          { label: { title: 'title', subtitle: 'subtitle' } },
+          { label: { title: 'title', subtitle: '' } },
+          { label: { title: 'title', subtitle: '' } }
+        ]}
+        vertical
+        variant="secondary"
+      />
+    )}
+  </Component>
+</Playground>
+
+## Vertical
+
+<Playground>
+  <Stepper vertical activeStep={2} steps={[false, false, false, false]} />
+</Playground>
+
+## Labels
+
+<Playground>
+  <Stepper
+    activeStep={2}
+    color="#d63426"
+    steps={[{ label: 'Step One' }, { label: 'Step Two' }, { label: 'Step Three' }, { label: 'Step Four' }]}
+  />
+  <Stepper
+    activeStep={0}
+    color="#d63426"
+    steps={[{ label: 'Step One' }, { label: 'Step Two' }, { label: 'Step Three' }, { label: 'Step Four' }]}
+    vertical
+  />
+</Playground>
+
+## Controlled and Dynamic Stepper
+
+<Playground>
+  <Component
+    initialState={{
+      activeStep: 0,
+      steps: [{ label: 'Label 1' }, { label: 'Label 2' }, { label: 'Label 3' }]
+    }}
+  >
+    {({ setState, state }) => (
+      <>
+        <Stepper activeStep={state.activeStep} selectIndex={(i) => setState({ activeStep: i })} steps={state.steps} />
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <div>
+          <Button
+            size="md"
+            disabled={state.activeStep === 0}
+            onClick={() => setState({ activeStep: state.activeStep - 1 })}
+          >
+            Previous Page
+          </Button>
+          <Button
+            size="md"
+            disabled={state.activeStep === state.steps.length - 1}
+            onClick={() => setState({ activeStep: state.activeStep + 1 })}
+          >
+            Next Page
+          </Button>
+          <Button
+            size="md"
+            onClick={() => setState({ steps: [...state.steps, { label: `Label ${state.steps.length + 1}` }] })}
+          >
+            Add Step
+          </Button>
+          <Button size="md" onClick={() => setState({ steps: state.steps.slice(0, -1), activeStep: 0 })}>
+            Remove Step
+          </Button>
+        </div>
+      </>
+    )}
+  </Component>
+</Playground>
+
+## ReactNode Titles and PostTitles
+
+  <Stepper
+    activeStep={2}
+    steps={[
+      { label: { title: React.ReactNode = (
+      <div>
+        Title Sample Text 1<span style={{ color: 'red' }}> *</span>
+      </div>
+    ), subtitle: 'subtitle' } },
+      {
+        label: { title: 'Title Sample Text?', titlePost: React.ReactNode = (<span style={{ color: 'red' }}> *</span>),
+        subtitle: '', boldText: ['Sample', 'Text?'], excludePunctuation: false }
+      },
+      { label: { title: 'Title Sample Text 3', titlePost: React.ReactNode = (<></>), subtitle: '' } }
+    ]}
+  />
